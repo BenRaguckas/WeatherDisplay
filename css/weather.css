@@ -1,0 +1,29 @@
+#loading{
+    animation: ease-in;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(22, 20, 28, 1);
+    background-image: url("../images/Loading.gif");    
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.autocomplete{
+  position: relative;
+  display: inline-block;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Weather</title>
+        <link rel="stylesheet" href="css/weather.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/overide.css">
+        <script type="module" src="js/pako.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+        <script src="js/weather.js"></script>
+    </head>
+    <body>
+        <!-- style="max-width: 1280px;" -->
+        <!-- NAVBAR -->
+        <nav class="w3-bar w3-light-grey w3-border w3-display-container" >
+            <input id="imperial" class="w3-check" type="checkbox">
+            <label>Imperial</label>
+            <!-- Search box -->
+            <div class="autocomplete w3-display-middle w3-half w3-border">
+                <input id="searchBox" class="w3-input w3-threequarter" type="text" name="searchBox" placeholder="Enter city name...">
+                <a id="searchButton" class="w3-button w3-quarter">Search</a>
+            </div>
+            <!-- Dropdown selector -->
+            <a id="countryButton" class="w3-button w3-right"><img class="dropicon" src=""> <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+        </nav>
+        <!-- Auto complete box -->
+        <div class="w3-display-container">
+            <div id="suggList" class="autocomplete-items w3-display-topmiddle w3-half"></div>
+        </div>
+        <!-- Country list box -->
+        <div class="w3-display-container">
+            <div id="countryList" class="w3-display-topright w3-border countryBox" style="display: none;"></div>
+        </div>
+        <!-- Page content -->
+        <div id="weatherDisplay" class="w3-content">
+        </div>
+        <div class="w3-content chartBox" style="width: 500px;">
+            <canvas id="chart" class="w3-left"></canvas>
+        </div>
+    </body>
+    <div id="loading" class="fade-out"></div>
+</html>
